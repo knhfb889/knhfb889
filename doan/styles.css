@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Donation Container */
+  .donation-container {
+    width: 700px;
+    height: 80px;
+    border: 5px solid #ffd700;
+    border-radius: 20px;
+    background: url('https://example.com/chinese-pattern.png') repeat; /* Replace with your pattern image */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Donation Progress Bar */
+  .donation-progress {
+    height: 100%;
+    width: 0%; /* Initial width for animation */
+    background: linear-gradient(90deg, #d2232a, #ffd700);
+    animation: fill-bar 3s ease-out forwards; /* Bar animation */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Floating Lantern */
+  .lantern {
+    width: 50px;
+    height: 50px;
+    background: url('https://example.com/lantern.png') no-repeat center/contain; /* Replace with your lantern image */
+    position: absolute;
+    top: -20px;
+    left: 30%;
+    animation: float 3s infinite alternate ease-in-out;
+    z-index: 2;
+  }
+  
+  /* Flying Dragon */
+  .dragon {
+    width: 100px;
+    height: 60px;
+    background: url('https://example.com/dragon.png') no-repeat center/contain; /* Replace with your dragon image */
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    animation: dragon-fly 5s linear infinite;
+    z-index: 3;
+  }
+  
+  /* Donation Label */
+  .donation-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+  }
+  
+  /* Animations */
+  @keyframes fill-bar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%; /* Adjust based on donation progress */
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+  
+  @keyframes dragon-fly {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 700px;
+    }
+  }
+  
